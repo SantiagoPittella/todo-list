@@ -30,10 +30,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       # Set a path where Postgres should store the data
-      PGDATA: /var/lib/postgresql/data/pgdata
     restart: always
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data1
   # Our Phoenix container
   
   
