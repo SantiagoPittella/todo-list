@@ -3,6 +3,9 @@
 To start your Phoenix server:
 
 RUN: 
+`cd app/`
+
+
 `docker-compose up`
 
 
