@@ -3,7 +3,7 @@ FROM bitwalker/alpine-elixir-phoenix:latest
 # Set exposed ports
 EXPOSE 4000
 ENV PORT=4000 MIX_ENV=prod
-ENV DATABASE_URL="ecto://postgres:postgres@localhost:5432/items"
+
 ENV SECRET_KEY_BASE="kq1R1KN2hpU+wRS01Ms93Cewu4zEhElPBgP2z57JspaHtyuA7aA7CGpWzM6A5mMe"
 # Cache elixir deps
 ADD mix.exs mix.lock ./
@@ -25,3 +25,5 @@ RUN cd assets/ && \
 USER default
 
 CMD ["mix", "phx.server"]
+
+RUN docker exec -it app_phoenix_1 /bin/sh -c "mix ecto.create ; mix ecto.migrate"

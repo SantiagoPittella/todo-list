@@ -16,6 +16,7 @@ services:
       PGPORT: 5432
       # Hostname of our Postgres container
       PGHOST: postgres
+      DATABASE_URL: ecto://postgres:postgres@db:5432/items
     ports:
       # Mapping the port to make the Phoenix app accessible outside of the container
       - "4000:4000"
