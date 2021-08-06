@@ -3,6 +3,7 @@
 To start your Phoenix server:
 
 You can run manually: 
+
 `cd app/`
 
 
