@@ -5,6 +5,7 @@ EXPOSE 4000
 ENV PORT=4000 MIX_ENV=prod
 
 ENV SECRET_KEY_BASE="kq1R1KN2hpU+wRS01Ms93Cewu4zEhElPBgP2z57JspaHtyuA7aA7CGpWzM6A5mMe"
+ENV DATABASE_URL=ecto://postgres:postgres@db:5432/items
 # Cache elixir deps
 ADD mix.exs mix.lock ./
 RUN mix do deps.get, deps.compile
